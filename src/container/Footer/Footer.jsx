@@ -4,7 +4,6 @@ import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
 import './Footer.scss';
-import { calcLength } from 'framer-motion';
 
 const Footer = () => {
   const [formData, setFormData] = useState({ username: '', email: '', message: '' });
@@ -16,7 +15,6 @@ const Footer = () => {
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const handleSubmit = () => {

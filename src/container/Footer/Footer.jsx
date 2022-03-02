@@ -26,7 +26,7 @@ const Footer = () => {
       email: formData.email,
       message: formData.message,
     };
-
+    
     client.create(contact)
       .then(() => {
         setLoading(false);
@@ -82,5 +82,5 @@ const Footer = () => {
 export default AppWrap(
   MotionWrap(Footer, 'app__footer'),
   'contact',
-  'app__whitebg',
+  'app__primarybg',
 );

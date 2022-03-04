@@ -126,6 +126,11 @@
     }
 
     &:hover {
+      svg {
+        color: var(--white-color);
+      }
+    }
+    #twitter:hover {
       background-color: var(--secondary-color);
       border-color: var(--secondary-color);
 
@@ -133,6 +138,7 @@
         color: var(--white-color);
       }
     }
+    
 
     @media screen and (min-width: 2000px) {
       width: 70px;
@@ -145,6 +151,18 @@
         height: 30px;
       }
     }
+  }
+  #github:hover {
+    background-color: #24292f;
+    border-color: #24292f;
+  }
+  #linkedin:hover {
+    background-color: #0a66c2;
+    border-color: #0a66c2;
+  }
+  #twitter:hover {
+    background-color: #1d9bf0;
+    border-color: #1d9bf0;
   }
 }
 

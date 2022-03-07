@@ -15,6 +15,15 @@ const About = () => {
       setAbouts(data);
     });
   }, []);
+  const [links, setLinks] = useState([]);
+
+  useEffect(() => {
+    const linksQuery = '*[_type == "links" && name >= "cv"] ';
+
+    client.fetch(linksQuery).then((data) => {
+      setLinks(data);
+    });
+  }, []);
 
   return (
     <>
@@ -42,7 +51,7 @@ const About = () => {
         ))}
       </div>
       <div className="app__resume ">
-          <a href="https://drive.google.com/file/d/1piZAl44rUmPY5Q94GB_65_qn9cI8MIZr/view?usp=sharing">
+          <a href={links[0]?.link}>
             <div>Check my Resume</div>
           </a>
         </div>
